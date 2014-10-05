@@ -100,7 +100,7 @@ public class MailMerge {
 
 	public static String constructMessage(String message, String arr[]) {
 		String res=message;
-		for(int i=1;i<arr.length;i++) {
+		for(int i=0;i<arr.length;i++) {
 			res=res.replaceAll("\\{"+i+"\\}", arr[i]);
 		}
 		return res;
