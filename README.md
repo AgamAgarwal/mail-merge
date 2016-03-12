@@ -7,6 +7,7 @@ Useful for sending a bunch of similar mails.
 Type the following to use mail-merge:
 
 ```bash
+javac MailMerge.java
 java MailMerge username subject_file message_file list_file
 ```
 The various command line arguments are below:
