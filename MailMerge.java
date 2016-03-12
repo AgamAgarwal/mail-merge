@@ -107,6 +107,10 @@ public class MailMerge {
 		for(int i=0;i<arr.length;i++) {
 			res=res.replaceAll("\\{"+i+"\\}", arr[i]);
 		}
+
+		// replace all escaped ending braces
+		res = res.replaceAll("\\\\\\}", "\\}");
+
 		return res;
 	}
 }

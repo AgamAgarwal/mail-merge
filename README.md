@@ -1,18 +1,24 @@
-mail-merge
-==========
+#mail-merge
+
 
 Useful for sending a bunch of similar mails.
 
-Using
------
+##Usage
+Type the following to use mail-merge:
 
-__list file__
+```bash
+java MailMerge username subject_file message_file list_file
+```
+The various command line arguments are below:
 
+###list file
 Tab separated entries. Zeroth entry has to be recipient's mail id.
 
-__subject file__
+###subject file
 Just the subject (needs to be common, as of now)
 
-__message file__
-Contains the message to be sent. Use {i} to put in entry from index i.
-Note - Currently no support for escaping messages of the form _{i}_
+###message file
+Contains the message to be sent. Use `{i}` to put in entry from index i.
+
+Note - For printing text in the form `{i}` use `\` to escape the ending brace.
+For example, to print `{1}`, type `{1\}` in the message file.
